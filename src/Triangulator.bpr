@@ -13,7 +13,7 @@
       Obj\FFrame.obj Obj\FFrameLines.obj Obj\FFrameOptimize.obj 
       Obj\FFrameCDT.obj Obj\quadedge.obj Obj\FFrameMesh.obj Obj\FFramePack.obj 
       Obj\FConvertG16.obj Obj\FConvertImage.obj Obj\FConvertA24.obj 
-      Obj\FMManager.obj"/>
+      Obj\FMManager.obj Obj\tinytga.obj"/>
     <RESFILES value="Triangulator.res"/>
     <IDLFILES value=""/>
     <IDLGENFILES value=""/>
@@ -95,6 +95,7 @@
       <FILE FILENAME="TriangulatorDLL\FConvertA24.cpp" FORMNAME="" UNITNAME="FConvertA24" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
       <FILE FILENAME="TriangulatorDLL\FMM\FMManager.cpp" FORMNAME="" UNITNAME="FMManager" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
       <FILE FILENAME="TriangulatorDLL\LZO\lzo.lib" FORMNAME="" UNITNAME="lzo.lib" CONTAINERID="LibTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="tinytga.cpp" FORMNAME="" UNITNAME="tinytga" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
   </FILELIST>
   <BUILDTOOLS>
   </BUILDTOOLS>
@@ -127,18 +128,23 @@ ProductName=
 ProductVersion=1.0.0.0
 Comments=
 
+[Excluded Packages]
+e:\dev\borland\cbuilder6\Bin\dclmcn60.bpl=(Untitled)
+
 [HistoryLists\hlIncludePath]
-Count=3
-Item0=TriangulatorDLL\cdt;TriangulatorDLL\UCL;TriangulatorDLL\LZO;TriangulatorDLL\FLZ;TriangulatorDLL\bz2;TriangulatorDLL\FMM;TriangulatorDLL;FMM;C:\Program Files\Borland\CBuilder5\Projects\;cdt;$(BCB)\include;$(BCB)\include\vcl
-Item1=TriangulatorDLL\UCL;TriangulatorDLL\LZO;TriangulatorDLL\FLZ;TriangulatorDLL\bz2;TriangulatorDLL\FMM;TriangulatorDLL;FMM;C:\Program Files\Borland\CBuilder5\Projects\;cdt;$(BCB)\include;$(BCB)\include\vcl
-Item2=TriangulatorDLL\FMM;TriangulatorDLL;FMM;C:\Program Files\Borland\CBuilder5\Projects\;cdt;$(BCB)\include;$(BCB)\include\vcl
+Count=4
+Item0=TriangulatorDLL\cdt;TriangulatorDLL\UCL;TriangulatorDLL\LZO;TriangulatorDLL\FLZ;TriangulatorDLL\bz2;TriangulatorDLL\FMM;TriangulatorDLL;FMM;C:\Program Files\Borland\CBuilder5\Projects;cdt;$(BCB)\include;$(BCB)\include\vcl
+Item1=TriangulatorDLL\cdt;TriangulatorDLL\UCL;TriangulatorDLL\LZO;TriangulatorDLL\FLZ;TriangulatorDLL\bz2;TriangulatorDLL\FMM;TriangulatorDLL;FMM;C:\Program Files\Borland\CBuilder5\Projects\;cdt;$(BCB)\include;$(BCB)\include\vcl
+Item2=TriangulatorDLL\UCL;TriangulatorDLL\LZO;TriangulatorDLL\FLZ;TriangulatorDLL\bz2;TriangulatorDLL\FMM;TriangulatorDLL;FMM;C:\Program Files\Borland\CBuilder5\Projects\;cdt;$(BCB)\include;$(BCB)\include\vcl
+Item3=TriangulatorDLL\FMM;TriangulatorDLL;FMM;C:\Program Files\Borland\CBuilder5\Projects\;cdt;$(BCB)\include;$(BCB)\include\vcl
 
 [HistoryLists\hlLibraryPath]
-Count=4
-Item0=TriangulatorDLL\lzo;TriangulatorDLL\cdt;TriangulatorDLL\UCL;TriangulatorDLL\LZO;TriangulatorDLL\FLZ;TriangulatorDLL\bz2;TriangulatorDLL\FMM;TriangulatorDLL;FMM;C:\Program Files\Borland\CBuilder5\Projects\;cdt;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib
-Item1=TriangulatorDLL\cdt;TriangulatorDLL\UCL;TriangulatorDLL\LZO;TriangulatorDLL\FLZ;TriangulatorDLL\bz2;TriangulatorDLL\FMM;TriangulatorDLL;FMM;C:\Program Files\Borland\CBuilder5\Projects\;cdt;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib
-Item2=TriangulatorDLL\UCL;TriangulatorDLL\LZO;TriangulatorDLL\FLZ;TriangulatorDLL\bz2;TriangulatorDLL\FMM;TriangulatorDLL;FMM;C:\Program Files\Borland\CBuilder5\Projects\;cdt;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib
-Item3=TriangulatorDLL\FMM;TriangulatorDLL;FMM;C:\Program Files\Borland\CBuilder5\Projects\;cdt;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib
+Count=5
+Item0=TriangulatorDLL\lzo;TriangulatorDLL\cdt;TriangulatorDLL\UCL;TriangulatorDLL\FLZ;TriangulatorDLL\bz2;TriangulatorDLL\FMM;TriangulatorDLL;FMM;C:\Program Files\Borland\CBuilder5\Projects;cdt;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib
+Item1=TriangulatorDLL\lzo;TriangulatorDLL\cdt;TriangulatorDLL\UCL;TriangulatorDLL\LZO;TriangulatorDLL\FLZ;TriangulatorDLL\bz2;TriangulatorDLL\FMM;TriangulatorDLL;FMM;C:\Program Files\Borland\CBuilder5\Projects\;cdt;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib
+Item2=TriangulatorDLL\cdt;TriangulatorDLL\UCL;TriangulatorDLL\LZO;TriangulatorDLL\FLZ;TriangulatorDLL\bz2;TriangulatorDLL\FMM;TriangulatorDLL;FMM;C:\Program Files\Borland\CBuilder5\Projects\;cdt;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib
+Item3=TriangulatorDLL\UCL;TriangulatorDLL\LZO;TriangulatorDLL\FLZ;TriangulatorDLL\bz2;TriangulatorDLL\FMM;TriangulatorDLL;FMM;C:\Program Files\Borland\CBuilder5\Projects\;cdt;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib
+Item4=TriangulatorDLL\FMM;TriangulatorDLL;FMM;C:\Program Files\Borland\CBuilder5\Projects\;cdt;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib
 
 [HistoryLists\hlDebugSourcePath]
 Count=1
@@ -180,10 +186,5 @@ LinkCGLIB=0
 AddServerUnit=1
 AddClientUnit=1
 PrecompiledHeaders=1
-
-[Language]
-ActiveLang=
-ProjectLang=
-RootDir=
   </IDEOPTIONS>
 </PROJECT>

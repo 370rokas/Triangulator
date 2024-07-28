@@ -30,3 +30,8 @@
 *.exe
 *.out
 *.app
+
+# C++ Builder Stuff
+*.bpi
+*.bpf
+*.cgl
