@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!-- C++Builder XML Project -->
+<PROJECT>
+  <MACROS>
+    <VERSION value="BCB.05.03"/>
+    <PROJECT value="..\TriangulatorDLL.dll"/>
+    <OBJFILES value="Obj\MainDLL.obj Obj\FFrameMesh.obj Obj\FConvert.obj Obj\FConvertA24.obj 
+      Obj\FConvertImage.obj Obj\FFrame.obj Obj\FFrameCDT.obj Obj\FFrameLines.obj 
+      Obj\FBitmap.obj Obj\FFrameOptimize.obj Obj\FFramePack.obj Obj\FMesh.obj 
+      Obj\FTriangulator.obj Obj\quadedge.obj Obj\FPerformance.obj 
+      Obj\FConvertG16.obj Obj\lzo_decompress.obj Obj\randtable.obj Obj\bzlib.obj 
+      Obj\compress.obj Obj\crctable.obj Obj\decompress.obj Obj\huffman.obj 
+      Obj\blocksort.obj Obj\ucl_decompress.obj Obj\FCompressor.obj 
+      Obj\FLZDecoder.obj Obj\FMManager.obj Obj\FConvertIO.obj"/>
+    <RESFILES value=""/>
+    <IDLFILES value=""/>
+    <IDLGENFILES value=""/>
+    <DEFFILE value=""/>
+    <RESDEPEN value="$(RESFILES)"/>
+    <LIBFILES value=""/>
+    <LIBRARIES value="vcl50.lib"/>
+    <SPARELIBS value="vcl50.lib"/>
+    <PACKAGES value="vcl50.bpi vclx50.bpi vcljpg50.bpi bcbsmp50.bpi qrpt50.bpi vcldb50.bpi 
+      vclbde50.bpi ibsmp50.bpi vcldbx50.bpi teeui50.bpi teedb50.bpi tee50.bpi 
+      nmfast50.bpi dclocx50.bpi DCLUSR50.bpi"/>
+    <PATHCPP value=".;cdt;LZO;bz2;UCL;FLZ;FMM"/>
+    <PATHPAS value=".;"/>
+    <PATHRC value=".;"/>
+    <PATHASM value=".;"/>
+    <DEBUGLIBPATH value="$(BCB)\lib\debug"/>
+    <RELEASELIBPATH value="$(BCB)\lib\release"/>
+    <LINKER value="ilink32"/>
+    <USERDEFINES value="_DEBUG"/>
+    <SYSDEFINES value="NO_STRICT;_NO_VCL"/>
+    <MAINSOURCE value="TriangulatorDLL.bpf"/>
+    <INCLUDEPATH value="FLZ;UCL;bz2;LZO;cdt;FMM;$(BCB)\include;$(BCB)\include\vcl"/>
+    <LIBPATH value="FLZ;UCL;bz2;LZO;cdt;FMM;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib"/>
+    <WARNINGS value="-w-par -w-8027 -w-8026"/>
+    <WARNOPTSTR value=""/>
+  </MACROS>
+  <OPTIONS>
+    <IDLCFLAGS value="-IFLZ -IUCL -Ibz2 -ILZO -Icdt -IFMM -I$(BCB)\include -I$(BCB)\include\vcl 
+      -src_suffix cpp -D_DEBUG -boa"/>
+    <CFLAG1 value="-WD -Od -Vx -Ve -ff -X- -r- -a8 -5 -b- -k -y -v -vi- -tWD -tWM- -c"/>
+    <PFLAGS value="-N2Obj -N0Obj -$Y+ -$W -$O- -v -JPHNE -M"/>
+    <RFLAGS value=""/>
+    <AFLAGS value="/mx /m5 /w2 /zi"/>
+    <LFLAGS value="-IObj -D&quot;&quot; -aa -Tpd -x -Gn -v"/>
+  </OPTIONS>
+  <LINKER>
+    <ALLOBJ value="c0d32.obj $(OBJFILES)"/>
+    <ALLRES value="$(RESFILES)"/>
+    <ALLLIB value="$(LIBFILES) $(LIBRARIES) import32.lib cw32.lib"/>
+  </LINKER>
+  <IDEOPTIONS>
+[Version Info]
+IncludeVerInfo=0
+AutoIncBuild=0
+MajorVer=1
+MinorVer=0
+Release=0
+Build=0
+Debug=0
+PreRelease=0
+Special=0
+Private=0
+DLL=0
+Locale=1049
+CodePage=1251
+
+[Version Info Keys]
+CompanyName=
+FileDescription=
+FileVersion=1.0.0.0
+InternalName=
+LegalCopyright=
+LegalTrademarks=
+OriginalFilename=
+ProductName=
+ProductVersion=1.0.0.0
+Comments=
+
+[Excluded Packages]
+$(BCB)\Projects\Bpl\dclusr50.bpl=Borland User Components
+
+[HistoryLists\hlIncludePath]
+Count=1
+Item0=FLZ;UCL;bz2;LZO;cdt;FMM;$(BCB)\include;$(BCB)\include\vcl
+
+[HistoryLists\hlLibraryPath]
+Count=1
+Item0=FLZ;UCL;bz2;LZO;cdt;FMM;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib
+
+[HistoryLists\hlDebugSourcePath]
+Count=1
+Item0=$(BCB)\source\vcl
+
+[HistoryLists\hlConditionals]
+Count=1
+Item0=_DEBUG
+
+[HistoryLists\hlIntOutputDir]
+Count=1
+Item0=Obj
+
+[HistoryLists\hlFinalOutputDir]
+Count=2
+Item0=..\
+Item1=..
+
+[Debugging]
+DebugSourceDirs=$(BCB)\source\vcl
+
+[Parameters]
+RunParams=
+HostApplication=D:\proj\Triangulator\Triangulator.exe
+RemoteHost=
+RemotePath=
+RemoteDebug=0
+
+[Compiler]
+ShowInfoMsgs=0
+LinkDebugVcl=0
+LinkCGLIB=0
+
+[CORBA]
+AddServerUnit=1
+AddClientUnit=1
+PrecompiledHeaders=1
+
+[Language]
+ActiveLang=
+ProjectLang=
+RootDir=
+  </IDEOPTIONS>
+</PROJECT>

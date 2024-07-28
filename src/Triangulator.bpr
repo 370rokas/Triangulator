@@ -1,0 +1,189 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!-- C++Builder XML Project -->
+<PROJECT>
+  <MACROS>
+    <VERSION value="BCB.06.00"/>
+    <PROJECT value="Triangulator.exe"/>
+    <OBJFILES value="Obj\Triangulator.obj Obj\Unit1.obj Obj\FScreen.obj Obj\UnitGraph.obj 
+      Obj\FTriangulator.obj Obj\FBitmap.obj Obj\FConvert.obj 
+      Obj\FPerformance.obj Obj\FMesh.obj Obj\FCompressor.obj Obj\blocksort.obj 
+      Obj\bzlib.obj Obj\compress.obj Obj\crctable.obj Obj\decompress.obj 
+      Obj\huffman.obj Obj\randtable.obj Obj\FLZDecoder.obj 
+      Obj\lzo_decompress.obj Obj\ucl_decompress.obj Obj\FConvertIO.obj 
+      Obj\FFrame.obj Obj\FFrameLines.obj Obj\FFrameOptimize.obj 
+      Obj\FFrameCDT.obj Obj\quadedge.obj Obj\FFrameMesh.obj Obj\FFramePack.obj 
+      Obj\FConvertG16.obj Obj\FConvertImage.obj Obj\FConvertA24.obj 
+      Obj\FMManager.obj"/>
+    <RESFILES value="Triangulator.res"/>
+    <IDLFILES value=""/>
+    <IDLGENFILES value=""/>
+    <DEFFILE value=""/>
+    <RESDEPEN value="$(RESFILES) Unit1.dfm"/>
+    <LIBFILES value="TriangulatorDLL\LZO\lzo.lib"/>
+    <LIBRARIES value="vclx.lib vcl.lib rtl.lib"/>
+    <SPARELIBS value="rtl.lib vcl.lib vclx.lib"/>
+    <PACKAGES value="rtl.bpi vcl.bpi vclx.bpi vcljpg.bpi bcbsmp.bpi qrpt.bpi dbrtl.bpi 
+      vcldb.bpi bdertl.bpi ibsmp.bpi vcldbx.bpi teeui.bpi teedb.bpi tee.bpi 
+      nmfast.bpi dclocx.bpi DCLUSR.bpi"/>
+    <PATHCPP value=".;TriangulatorDLL;TriangulatorDLL;TriangulatorDLL;TriangulatorDLL;TriangulatorDLL;TriangulatorDLL;TriangulatorDLL\bz2;TriangulatorDLL\bz2;TriangulatorDLL\bz2;TriangulatorDLL\bz2;TriangulatorDLL\bz2;TriangulatorDLL\bz2;TriangulatorDLL\bz2;TriangulatorDLL\FLZ;TriangulatorDLL\LZO;TriangulatorDLL\UCL;TriangulatorDLL;TriangulatorDLL;TriangulatorDLL;TriangulatorDLL;TriangulatorDLL;TriangulatorDLL\cdt;TriangulatorDLL;TriangulatorDLL;TriangulatorDLL;TriangulatorDLL;TriangulatorDLL;TriangulatorDLL\FMM"/>
+    <PATHPAS value=".;"/>
+    <PATHRC value=".;"/>
+    <PATHASM value=".;"/>
+    <DEBUGLIBPATH value="$(BCB)\lib\debug"/>
+    <RELEASELIBPATH value="$(BCB)\lib\release"/>
+    <LINKER value="ilink32"/>
+    <USERDEFINES value="_NO_FMM_;_DEBUG"/>
+    <SYSDEFINES value="NO_STRICT"/>
+    <MAINSOURCE value="Triangulator.cpp"/>
+    <INCLUDEPATH value="TriangulatorDLL\cdt;TriangulatorDLL\UCL;TriangulatorDLL\LZO;TriangulatorDLL\FLZ;TriangulatorDLL\bz2;TriangulatorDLL\FMM;TriangulatorDLL;FMM;&quot;C:\Program Files\Borland\CBuilder5\Projects&quot;;cdt;$(BCB)\include;$(BCB)\include\vcl"/>
+    <LIBPATH value="TriangulatorDLL\lzo;TriangulatorDLL\cdt;TriangulatorDLL\UCL;TriangulatorDLL\FLZ;TriangulatorDLL\bz2;TriangulatorDLL\FMM;TriangulatorDLL;FMM;&quot;C:\Program Files\Borland\CBuilder5\Projects&quot;;cdt;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib"/>
+    <WARNINGS value="-w-par -w-8027 -w-8026"/>
+    <WARNOPTSTR value=""/>
+    <OTHERFILES value=""/>
+  </MACROS>
+  <OPTIONS>
+    <IDLCFLAGS value="-ITriangulatorDLL\cdt -ITriangulatorDLL\UCL -ITriangulatorDLL\LZO 
+      -ITriangulatorDLL\FLZ -ITriangulatorDLL\bz2 -ITriangulatorDLL\FMM 
+      -ITriangulatorDLL -IFMM -I&quot;C:\Program Files\Borland\CBuilder5\Projects&quot; 
+      -Icdt -I$(BCB)\include -I$(BCB)\include\vcl -src_suffix cpp -D_NO_FMM_ 
+      -D_DEBUG -boa"/>
+    <CFLAG1 value="-Od -Vx -Ve -X- -r- -a8 -5 -b- -k -y -v -vi- -c -tW -tWM"/>
+    <PFLAGS value="-N2Obj -N0Obj -$Y+ -$W -$O- -$A8 -v -JPHNE -M"/>
+    <RFLAGS value=""/>
+    <AFLAGS value="/mx /m5 /w2 /zi"/>
+    <LFLAGS value="-IObj -D&quot;&quot; -aa -Tpe -x -Gn -v"/>
+    <OTHERFILES value=""/>
+  </OPTIONS>
+  <LINKER>
+    <ALLOBJ value="c0w32.obj sysinit.obj $(OBJFILES)"/>
+    <ALLRES value="$(RESFILES)"/>
+    <ALLLIB value="$(LIBFILES) $(LIBRARIES) import32.lib cp32mt.lib"/>
+    <OTHERFILES value=""/>
+  </LINKER>
+  <FILELIST>
+      <FILE FILENAME="Triangulator.cpp" FORMNAME="" UNITNAME="Triangulator" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Triangulator.res" FORMNAME="" UNITNAME="Triangulator" CONTAINERID="ResTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Unit1.cpp" FORMNAME="Form1" UNITNAME="Unit1" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="FScreen.cpp" FORMNAME="" UNITNAME="FScreen" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="UnitGraph.cpp" FORMNAME="" UNITNAME="UnitGraph" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TriangulatorDLL\FTriangulator.cpp" FORMNAME="" UNITNAME="FTriangulator" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TriangulatorDLL\FBitmap.cpp" FORMNAME="" UNITNAME="FBitmap" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TriangulatorDLL\FConvert.cpp" FORMNAME="" UNITNAME="FConvert" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TriangulatorDLL\FPerformance.cpp" FORMNAME="" UNITNAME="FPerformance" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TriangulatorDLL\FMesh.cpp" FORMNAME="" UNITNAME="FMesh" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TriangulatorDLL\FCompressor.cpp" FORMNAME="" UNITNAME="FCompressor" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TriangulatorDLL\bz2\blocksort.cpp" FORMNAME="" UNITNAME="blocksort" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TriangulatorDLL\bz2\bzlib.cpp" FORMNAME="" UNITNAME="bzlib" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TriangulatorDLL\bz2\compress.cpp" FORMNAME="" UNITNAME="compress" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TriangulatorDLL\bz2\crctable.cpp" FORMNAME="" UNITNAME="crctable" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TriangulatorDLL\bz2\decompress.cpp" FORMNAME="" UNITNAME="decompress" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TriangulatorDLL\bz2\huffman.cpp" FORMNAME="" UNITNAME="huffman" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TriangulatorDLL\bz2\randtable.cpp" FORMNAME="" UNITNAME="randtable" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TriangulatorDLL\FLZ\FLZDecoder.cpp" FORMNAME="" UNITNAME="FLZDecoder" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TriangulatorDLL\LZO\lzo_decompress.cpp" FORMNAME="" UNITNAME="lzo_decompress" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TriangulatorDLL\UCL\ucl_decompress.cpp" FORMNAME="" UNITNAME="ucl_decompress" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TriangulatorDLL\FConvertIO.cpp" FORMNAME="" UNITNAME="FConvertIO" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TriangulatorDLL\FFrame.cpp" FORMNAME="" UNITNAME="FFrame" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TriangulatorDLL\FFrameLines.cpp" FORMNAME="" UNITNAME="FFrameLines" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TriangulatorDLL\FFrameOptimize.cpp" FORMNAME="" UNITNAME="FFrameOptimize" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TriangulatorDLL\FFrameCDT.cpp" FORMNAME="" UNITNAME="FFrameCDT" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TriangulatorDLL\cdt\quadedge.cpp" FORMNAME="" UNITNAME="quadedge" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TriangulatorDLL\FFrameMesh.cpp" FORMNAME="" UNITNAME="FFrameMesh" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TriangulatorDLL\FFramePack.cpp" FORMNAME="" UNITNAME="FFramePack" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TriangulatorDLL\FConvertG16.cpp" FORMNAME="" UNITNAME="FConvertG16" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TriangulatorDLL\FConvertImage.cpp" FORMNAME="" UNITNAME="FConvertImage" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TriangulatorDLL\FConvertA24.cpp" FORMNAME="" UNITNAME="FConvertA24" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TriangulatorDLL\FMM\FMManager.cpp" FORMNAME="" UNITNAME="FMManager" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TriangulatorDLL\LZO\lzo.lib" FORMNAME="" UNITNAME="lzo.lib" CONTAINERID="LibTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+  </FILELIST>
+  <BUILDTOOLS>
+  </BUILDTOOLS>
+
+  <IDEOPTIONS>
+[Version Info]
+IncludeVerInfo=0
+AutoIncBuild=0
+MajorVer=1
+MinorVer=0
+Release=0
+Build=0
+Debug=0
+PreRelease=0
+Special=0
+Private=0
+DLL=0
+Locale=1049
+CodePage=1251
+
+[Version Info Keys]
+CompanyName=
+FileDescription=
+FileVersion=1.0.0.0
+InternalName=
+LegalCopyright=
+LegalTrademarks=
+OriginalFilename=
+ProductName=
+ProductVersion=1.0.0.0
+Comments=
+
+[HistoryLists\hlIncludePath]
+Count=3
+Item0=TriangulatorDLL\cdt;TriangulatorDLL\UCL;TriangulatorDLL\LZO;TriangulatorDLL\FLZ;TriangulatorDLL\bz2;TriangulatorDLL\FMM;TriangulatorDLL;FMM;C:\Program Files\Borland\CBuilder5\Projects\;cdt;$(BCB)\include;$(BCB)\include\vcl
+Item1=TriangulatorDLL\UCL;TriangulatorDLL\LZO;TriangulatorDLL\FLZ;TriangulatorDLL\bz2;TriangulatorDLL\FMM;TriangulatorDLL;FMM;C:\Program Files\Borland\CBuilder5\Projects\;cdt;$(BCB)\include;$(BCB)\include\vcl
+Item2=TriangulatorDLL\FMM;TriangulatorDLL;FMM;C:\Program Files\Borland\CBuilder5\Projects\;cdt;$(BCB)\include;$(BCB)\include\vcl
+
+[HistoryLists\hlLibraryPath]
+Count=4
+Item0=TriangulatorDLL\lzo;TriangulatorDLL\cdt;TriangulatorDLL\UCL;TriangulatorDLL\LZO;TriangulatorDLL\FLZ;TriangulatorDLL\bz2;TriangulatorDLL\FMM;TriangulatorDLL;FMM;C:\Program Files\Borland\CBuilder5\Projects\;cdt;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib
+Item1=TriangulatorDLL\cdt;TriangulatorDLL\UCL;TriangulatorDLL\LZO;TriangulatorDLL\FLZ;TriangulatorDLL\bz2;TriangulatorDLL\FMM;TriangulatorDLL;FMM;C:\Program Files\Borland\CBuilder5\Projects\;cdt;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib
+Item2=TriangulatorDLL\UCL;TriangulatorDLL\LZO;TriangulatorDLL\FLZ;TriangulatorDLL\bz2;TriangulatorDLL\FMM;TriangulatorDLL;FMM;C:\Program Files\Borland\CBuilder5\Projects\;cdt;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib
+Item3=TriangulatorDLL\FMM;TriangulatorDLL;FMM;C:\Program Files\Borland\CBuilder5\Projects\;cdt;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib
+
+[HistoryLists\hlDebugSourcePath]
+Count=1
+Item0=$(BCB)\source\vcl
+
+[HistoryLists\hlConditionals]
+Count=4
+Item0=_NO_FMM_;_DEBUG
+Item1=_DEBUG
+Item2=_NO_FMM_
+Item3=_DEBUG;_NO_FMM_
+
+[HistoryLists\hlIntOutputDir]
+Count=2
+Item0=Obj
+Item1=.
+
+[Debugging]
+DebugSourceDirs=$(BCB)\source\vcl
+
+[Parameters]
+RunParams=
+Launcher=
+UseLauncher=0
+DebugCWD=
+HostApplication=
+RemoteHost=
+RemotePath=
+RemoteLauncher=
+RemoteCWD=
+RemoteDebug=0
+
+[Compiler]
+ShowInfoMsgs=0
+LinkDebugVcl=0
+LinkCGLIB=0
+
+[CORBA]
+AddServerUnit=1
+AddClientUnit=1
+PrecompiledHeaders=1
+
+[Language]
+ActiveLang=
+ProjectLang=
+RootDir=
+  </IDEOPTIONS>
+</PROJECT>

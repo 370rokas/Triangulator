@@ -1,0 +1,29 @@
+Error 00056. 0x100630 (Thread 0x0148):
+Access in freed memory: Attempt to access 4 byte(s) at 0x01BD7804+44.
+Call Tree:
+   0x0043D41B(=Triangulator.exe:0x01:03C41B) D:\proj\Triangulator\TriangulatorDLL\FFrameMesh.cpp#39
+   0x0043CF2E(=Triangulator.exe:0x01:03BF2E) D:\proj\Triangulator\TriangulatorDLL\FFrameMesh.cpp#11
+   0x0043196B(=Triangulator.exe:0x01:03096B) D:\proj\Triangulator\TriangulatorDLL\FFrame.cpp#318
+   0x004097DD(=Triangulator.exe:0x01:0087DD) D:\proj\Triangulator\TriangulatorDLL\FTriangulator.cpp#20
+   0x0040CC46(=Triangulator.exe:0x01:00BC46) D:\proj\Triangulator\TriangulatorDLL\FConvert.cpp#12
+   0x00444DE9(=Triangulator.exe:0x01:043DE9) D:\proj\Triangulator\TriangulatorDLL\FConvertG16.cpp#716
+
+The object (0x01BD7804) [size: 128 bytes] was created with new
+Call Tree:
+   0x0043E51A(=Triangulator.exe:0x01:03D51A) D:\proj\Triangulator\TriangulatorDLL\FFrameMesh.cpp#265
+   0x0043151F(=Triangulator.exe:0x01:03051F) D:\proj\Triangulator\TriangulatorDLL\FFrame.cpp#257
+   0x00431921(=Triangulator.exe:0x01:030921) D:\proj\Triangulator\TriangulatorDLL\FFrame.cpp#310
+   0x004097DD(=Triangulator.exe:0x01:0087DD) D:\proj\Triangulator\TriangulatorDLL\FTriangulator.cpp#20
+   0x0040CC46(=Triangulator.exe:0x01:00BC46) D:\proj\Triangulator\TriangulatorDLL\FConvert.cpp#12
+   0x00444DE9(=Triangulator.exe:0x01:043DE9) D:\proj\Triangulator\TriangulatorDLL\FConvertG16.cpp#716
+
+The object (0x01BD7804) was deleted with delete
+Call Tree:
+   0x00406876(=Triangulator.exe:0x01:005876) TRIANGULATORDLL\FMesh.h#86
+   0x0043D8D5(=Triangulator.exe:0x01:03C8D5) D:\proj\Triangulator\TriangulatorDLL\FFrameMesh.cpp#121
+   0x0043CF2E(=Triangulator.exe:0x01:03BF2E) D:\proj\Triangulator\TriangulatorDLL\FFrameMesh.cpp#11
+   0x0043196B(=Triangulator.exe:0x01:03096B) D:\proj\Triangulator\TriangulatorDLL\FFrame.cpp#318
+   0x004097DD(=Triangulator.exe:0x01:0087DD) D:\proj\Triangulator\TriangulatorDLL\FTriangulator.cpp#20
+   0x0040CC46(=Triangulator.exe:0x01:00BC46) D:\proj\Triangulator\TriangulatorDLL\FConvert.cpp#12
+
+------------------------------------------
