@@ -207,10 +207,10 @@ object Form1: TForm1
         Caption = 'Correct Levels'
         OnClick = CorrectLevels1Click
       end
-    end
-    object Dumpforg171: TMenuItem
-      Caption = 'Dump for .g17'
-      OnClick = Dumpforg171Click
+      object Dumptga1: TMenuItem
+        Caption = 'Dump .tga'
+        OnClick = Dumptga1Click
+      end
     end
   end
   object OpenDialogLst: TOpenDialog

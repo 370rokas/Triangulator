@@ -9,6 +9,8 @@
 #include "Unit1.h"
 #include "FScreen.h"
 #include "FConvert.h"
+
+#include "tinytga.h"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.dfm"
@@ -20,7 +22,7 @@ AnsiString CurrentFileName;
 void DrawFrame(HDC Handle, FFrame* F, FFrame* FS, FBitmap* Texture, bool isMeshDraw, bool isZDraw);
 int DrawTexture(HDC Handle, FBitmap* bmp);
 //---------------------------------------------------------------------------
-bool g_isAnimation = !true; // - переключение режима анимация/здание-дерево
+bool g_isAnimation = !true; // - пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ/пїЅпїЅпїЅпїЅпїЅпїЅ-пїЅпїЅпїЅпїЅпїЅпїЅ
 //---------------------------------------------------------------------------
 FScreen* myScreen = NULL;
 //---------------------------------------------------------------------------
@@ -447,13 +449,9 @@ void __fastcall TForm1::CorrectLevels1Click(TObject *Sender)
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TForm1::Dumpforg171Click(TObject *Sender)
+void __fastcall TForm1::Dumptga1Click(TObject *Sender)
 {
    Form1->StatusBar1->Panels->Items[0]->Text = "Dumping for .g17";
-
-   // Turn off the mesh & no texture view
-   ToolButtonTri->Down = 0;
-   ToolButtonZ->Down = 0;
 
    // Create a folder for storing the output data
    AnsiString FolderName = ChangeFileExt(CurrentFileName, "");
@@ -463,28 +461,45 @@ void __fastcall TForm1::Dumpforg171Click(TObject *Sender)
    for (int CurrentFrameIdx = 0; CurrentFrameIdx < Convert.Triangulator.Frames.sizeUsed; CurrentFrameIdx++)
    {
       FFrame* F = Convert.Triangulator.Frames[CurrentFrameIdx];
-      FFrame* FS = NULL;
-      if(Convert.Triangulator.Frames.sizeUsed == Convert.TriangulatorS.Frames.sizeUsed)
-         FS = Convert.TriangulatorS.Frames[CurrentFrameIdx];
+      FBitmap* bmp = F->Bitmap;
 
-      
-      // Create a new screen
-      if(myScreen)
-      {
-         delete myScreen;
-         myScreen = NULL;
+      tt_image *image = tt_create(bmp->Width, bmp->Height, tt_make_color(0x00000000));
+
+      for (int y = 0; y < bmp->Height; y++) {
+         for (int x = 0; x < bmp->Width; x++) {
+            if(x >= 0 && x < myScreen->Width && y >= 0 && y < myScreen->Height){
+               RGBAX& col = bmp->GetPixel(x, y);               
+
+               // idk why but Red and Blue are swapped
+               int r,g,b,a,n;
+               r = col.b;
+               g = col.g;
+               b = col.r;
+               a = col.a;
+               n = col.n;
+
+               /*if (n) {
+                  r = 0;
+                  b = 0;
+
+                  g = 0xE0 * a / 0xE0;
+                  a = 255;
+               }*/
+
+               tt_color color;
+               color.r = r;
+               color.g = g;
+               color.b = b;
+               color.a = a;
+
+               tt_set_color(image, x, y, color);
+            }
+         }
       }
-      myScreen = new FScreen(F->Width - F->Bitmap->OriginX*2, F->Height - F->Bitmap->OriginY*2, Form1->Canvas->Handle);
-
-      // Clear the screen
-      myScreen->Clear(RGB(128, 128, 128));
-
-      // Draw the frame
-      DrawFrame(Form1->Canvas->Handle, F, FS, NULL, Form1->ToolButtonTri->Down, Form1->ToolButtonZ->Down);
 
       // Save the frame inside the folder
-      AnsiString FileName = FolderName + "\\Frame_" + IntToStr(CurrentFrameIdx) + ".bmp";
-      myScreen->ScrBitmap->SaveToFile(FileName);
+      AnsiString FileName = FolderName + "\\Frame_" + IntToStr(CurrentFrameIdx) + ".tga";
+      tt_save(image, FileName.c_str());
    }
 
    // Dump all the textures
@@ -496,5 +511,5 @@ void __fastcall TForm1::Dumpforg171Click(TObject *Sender)
 
    Form1->StatusBar1->Panels->Items[0]->Text = "Dump successful!";
 }
-//---------------------------------------------------------------------------
+
 
