@@ -56,6 +56,7 @@ __published:	// IDE-managed Components
    TToolButton *ToolButtonZ;
    TMenuItem *Tools1;
    TMenuItem *CorrectLevels1;
+        TMenuItem *Dumpforg171;
    void __fastcall MainPaintBoxPaint(TObject *Sender);
    void __fastcall FormClose(TObject *Sender, TCloseAction &Action);
    void __fastcall PageControl1Change(TObject *Sender);
@@ -81,6 +82,7 @@ __published:	// IDE-managed Components
           TShiftState Shift);
    void __fastcall ToolButtonZClick(TObject *Sender);
    void __fastcall CorrectLevels1Click(TObject *Sender);
+        void __fastcall Dumpforg171Click(TObject *Sender);
 private:	// User declarations
    void __fastcall ImportFramesProc(AnsiString str);
 public:		// User declarations

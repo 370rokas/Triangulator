@@ -447,3 +447,54 @@ void __fastcall TForm1::CorrectLevels1Click(TObject *Sender)
 }
 //---------------------------------------------------------------------------
 
+void __fastcall TForm1::Dumpforg171Click(TObject *Sender)
+{
+   Form1->StatusBar1->Panels->Items[0]->Text = "Dumping for .g17";
+
+   // Turn off the mesh & no texture view
+   ToolButtonTri->Down = 0;
+   ToolButtonZ->Down = 0;
+
+   // Create a folder for storing the output data
+   AnsiString FolderName = ChangeFileExt(CurrentFileName, "");
+   mkdir(FolderName.c_str());
+
+   // For each frame
+   for (int CurrentFrameIdx = 0; CurrentFrameIdx < Convert.Triangulator.Frames.sizeUsed; CurrentFrameIdx++)
+   {
+      FFrame* F = Convert.Triangulator.Frames[CurrentFrameIdx];
+      FFrame* FS = NULL;
+      if(Convert.Triangulator.Frames.sizeUsed == Convert.TriangulatorS.Frames.sizeUsed)
+         FS = Convert.TriangulatorS.Frames[CurrentFrameIdx];
+
+      
+      // Create a new screen
+      if(myScreen)
+      {
+         delete myScreen;
+         myScreen = NULL;
+      }
+      myScreen = new FScreen(F->Width - F->Bitmap->OriginX*2, F->Height - F->Bitmap->OriginY*2, Form1->Canvas->Handle);
+
+      // Clear the screen
+      myScreen->Clear(RGB(128, 128, 128));
+
+      // Draw the frame
+      DrawFrame(Form1->Canvas->Handle, F, FS, NULL, Form1->ToolButtonTri->Down, Form1->ToolButtonZ->Down);
+
+      // Save the frame inside the folder
+      AnsiString FileName = FolderName + "\\Frame_" + IntToStr(CurrentFrameIdx) + ".bmp";
+      myScreen->ScrBitmap->SaveToFile(FileName);
+   }
+
+   // Dump all the textures
+   for (int CurrentTextureIdx = 0; CurrentTextureIdx < Convert.Triangulator.Textures.sizeUsed-1; CurrentTextureIdx++) {
+      FBitmap* T = Convert.Triangulator.Textures[CurrentTextureIdx];
+      AnsiString FileName = FolderName + "\\Texture_" + IntToStr(CurrentTextureIdx) + ".tga";
+      T->SaveToFile(FileName.c_str());
+   }
+
+   Form1->StatusBar1->Panels->Items[0]->Text = "Dump successful!";
+}
+//---------------------------------------------------------------------------
+
