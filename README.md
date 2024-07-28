@@ -2,6 +2,8 @@
 
 A modding tool for Cossacks 2 & Heroes of Annihilated Empires.
 
+Unfortunatelly, this version of the code only supports .gp2 (HoAE) files. I may re-add the support for .g2d files if i have time in the feature, but if you want feel free to implement it yourself and create a pull request :)
+
 Read more about its usage [here](https://cossacks2modding.wiki.gg/wiki/Triangulator).
 
 ## How to build?

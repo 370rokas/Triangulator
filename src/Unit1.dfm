@@ -401,7 +401,7 @@ object Form1: TForm1
   end
   object OpenDialogG2D: TOpenDialog
     DefaultExt = 'g2d'
-    Filter = 'GP2|*.gp2'
+    Filter = 'GP2/G2D|*.gp2;*.g2d'
     InitialDir = '.'
     Title = 'Open GP2 Files'
     Left = 8
